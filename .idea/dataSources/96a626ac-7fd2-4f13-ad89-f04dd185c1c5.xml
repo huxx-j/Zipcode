@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@huxxinstance">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.7">
+    <root id="1"/>
+    <schema id="2" parent="1" name="HUXX">
+      <ObjectId>67</ObjectId>
+      <IntrospectionTimestamp>2018-04-10.09:54:48</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-04-10.01:25:21</CreatedTimestamp>
+      <ModifiedTimestamp>2018-04-10.09:46:14</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="AUDSYS">
+      <ObjectId>7</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="SYSTEM">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="OUTLN">
+      <ObjectId>13</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="GSMADMIN_INTERNAL">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="GSMUSER">
+      <ObjectId>22</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="DIP">
+      <ObjectId>23</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="DBSNMP">
+      <ObjectId>48</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="APPQOSSYS">
+      <ObjectId>49</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="XDB">
+      <ObjectId>50</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="ANONYMOUS">
+      <ObjectId>51</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="GSMCATUSER">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="CTXSYS">
+      <ObjectId>62</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="RDSADMIN">
+      <ObjectId>64</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="SYSBACKUP">
+      <ObjectId>2147483617</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="SYSDG">
+      <ObjectId>2147483618</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="SYSKM">
+      <ObjectId>2147483619</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <table id="22" parent="2" name="MEMBER_TBL">
+      <ObjectId>20460</ObjectId>
+      <CreatedTimestamp>2018-04-10.01:25:21</CreatedTimestamp>
+      <ModifiedTimestamp>2018-04-10.01:25:21</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="23" parent="2" name="ZIPCODE_TBL">
+      <ObjectId>20467</ObjectId>
+      <CreatedTimestamp>2018-04-10.09:46:14</CreatedTimestamp>
+      <ModifiedTimestamp>2018-04-10.09:46:14</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="24" parent="22" name="ID">
+      <Position>1</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="22" name="SYS_C005099">
+      <ObjectId>20461</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-04-10.01:25:22</CreatedTimestamp>
+      <ModifiedTimestamp>2018-04-10.01:25:22</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="22" name="SYS_C005099">
+      <NameSurrogate>1</NameSurrogate>
+      <ModifiedTimestamp>2018-04-10.01:25:22</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>SYS_C005099</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="23" name="ZIPCODE">
+      <Position>1</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="23" name="SIDO">
+      <Position>2</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="23" name="GUGUN">
+      <Position>3</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="23" name="DONG">
+      <Position>4</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="23" name="RI">
+      <Position>5</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="32" parent="23" name="BLDG">
+      <Position>6</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="33" parent="23" name="BUNJI">
+      <Position>7</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+    </column>
+    <column id="34" parent="23" name="SEQ">
+      <Position>8</Position>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+  </database-model>
+</dataSource>

@@ -15,14 +15,14 @@ public class ZipcodeDAO {
         ArrayList<ZipcodeVO> list = new ArrayList<>();
         ConnectionManager mgr = new ConnectionManager();
         Connection con = mgr.getConnection();
-        System.out.println(123+dong);
-        String sql = "select * from ZIPCODE_TBL where DONG like '%"+dong+"%'";
-        Statement statement = null;
+        String sql = "select * from ZIPCODE_TBL where DONG like ?";
+        PreparedStatement preparedStatement = null;
         ZipcodeVO vo;
-
+        ResultSet resultSet= null;
         try {
-            statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
+            preparedStatement = con.prepareStatement(sql);
+            preparedStatement.setString(1,"%"+dong+"%");
+            resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 vo = new ZipcodeVO();
                 vo.setZipcode(resultSet.getString(1));
@@ -38,6 +38,8 @@ public class ZipcodeDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            mgr.connectClose(con,preparedStatement,resultSet);
         }
 
         return list;

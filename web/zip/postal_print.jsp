@@ -18,20 +18,25 @@
 </head>
 <body>
 <%
-    String dong = request.getParameter("dong");
-    List<ZipcodeVO> list;
-    ZipcodeDAO dao = new ZipcodeDAO();
-    list = dao.search(dong);
-    for (ZipcodeVO vo :list) {
-        System.out.println(vo.getZipcode());
-        System.out.println(vo.getSido());
-        System.out.println(vo.getGugun());
-        System.out.println(vo.getDong());
-        System.out.println(vo.getRi());
-        System.out.println(vo.getBldg());
-        System.out.println(vo.getBunji());
-        System.out.println(vo.getSeq());
+    ArrayList<ZipcodeVO> list = (ArrayList<ZipcodeVO>) request.getAttribute("list");
+    for(ZipcodeVO vo : list) {
+        out.println(vo.toString() + "<br>");
     }
+
+//    String dong = request.getParameter("dong");
+//    List<ZipcodeVO> list;
+//    ZipcodeDAO dao = new ZipcodeDAO();
+//    list = dao.search(dong);
+//    for (ZipcodeVO vo :list) {
+//        System.out.println(vo.getZipcode());
+//        System.out.println(vo.getSido());
+//        System.out.println(vo.getGugun());
+//        System.out.println(vo.getDong());
+//        System.out.println(vo.getRi());
+//        System.out.println(vo.getBldg());
+//        System.out.println(vo.getBunji());
+//        System.out.println(vo.getSeq());
+//    }
 %>
 </body>
 </html>

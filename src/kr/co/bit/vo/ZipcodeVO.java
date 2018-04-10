@@ -10,6 +10,11 @@ public class ZipcodeVO {
     private String bldg;
     private String bunji;
 
+    @Override
+    public String toString() {
+        return String.format("%s %s %s %s %s %s %s %s" , zipcode,sido,gugun,dong,ri,bldg,bunji,seq);
+    }
+
     public ZipcodeVO() {
     }
 

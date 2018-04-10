@@ -1,6 +1,7 @@
 package kr.co.bit.command;
 
 import kr.co.bit.dao.ZipcodeDAO;
+import kr.co.bit.vo.ZipcodeVO;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommandController extends HttpServlet {
     @Override
@@ -29,18 +32,21 @@ public class CommandController extends HttpServlet {
         String cmd = request.getParameter("cmd");
         cmd= cmd==null?"":cmd;
                 String url = "";
-        ZipcodeDAO dao = new ZipcodeDAO();
 
         if (cmd.equals("make")) {
             url = "./zip/result.jsp";
+            ZipcodeDAO dao = new ZipcodeDAO();
             String path = this.getServletContext().getRealPath("WEB-INF/file/zipcode.csv");
             boolean flag = dao.insert(path);
 
             request.setAttribute("result", flag ? "success" : "fail");
         } else if (cmd.equals("search")) {
-//            String dong = request.getParameter("dong");
-//            System.out.println(12+dong);
-            url = "./zip/postal_print.jsp";
+            ZipcodeDAO dao = new ZipcodeDAO();
+            String dong = request.getParameter("dong");
+            List<ZipcodeVO> list = dao.search(dong);
+            request.setAttribute("list",list);
+//
+            url = "./zip/postal.jsp";
 
         }
         resp.setContentType("text/html; charset=UTF-8");

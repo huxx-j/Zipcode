@@ -5,7 +5,7 @@ import java.sql.*;
 public class ConnectionManager {
     public Connection getConnection() {
         Connection con = null;
-        String url = "jdbc:oracle:thin:@localhost:1521:XE";
+        String url = "jdbc:oracle:thin:@huxxinstance.c2corwmutw7a.ap-northeast-2.rds.amazonaws.com:1521:ORCL";
         String driver = "oracle.jdbc.OracleDriver";
 
         try {
@@ -14,7 +14,7 @@ public class ConnectionManager {
             e.printStackTrace();
         }
         try {
-            con = DriverManager.getConnection(url, "hr", "1234");
+            con = DriverManager.getConnection(url, "huxx", "k223092871");
         } catch (SQLException e) {
             e.printStackTrace();
         }
