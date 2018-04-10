@@ -30,9 +30,12 @@
     }
     stringBuffer.append("</select>");
     out.print(stringBuffer.toString());
-
 %>
-
+<br><br>
+<input type="text" name="zip1" size="5"> -
+<input type="text" name="zip2" size="5"> <br><br>
+<input type="text" name="addr1" size="50"> <br><br>
+<input type="text" name="addr2" size="50">
     <%--<%--%>
         <%--ArrayList<ZipcodeVO> list = (ArrayList<ZipcodeVO>) request.getAttribute("list");--%>
         <%--if (list==null) {--%>
@@ -49,7 +52,6 @@
         <%--}--%>
 
     <%--%>--%>
-</select>
 <br>
 
 <%--<form action="postal_print.jsp" method="post">--%>
