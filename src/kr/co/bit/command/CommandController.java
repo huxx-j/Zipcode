@@ -37,7 +37,7 @@ public class CommandController extends HttpServlet {
             url = "./zip/result.jsp";
             ZipcodeDAO dao = new ZipcodeDAO();
             String path = this.getServletContext().getRealPath("WEB-INF/file/zipcode.csv");
-            boolean flag = dao.insert(path);
+            boolean flag = dao.insertv2(path);
 
             request.setAttribute("result", flag ? "success" : "fail");
         } else if (cmd.equals("search")) {

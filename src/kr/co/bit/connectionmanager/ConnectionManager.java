@@ -14,7 +14,7 @@ public class ConnectionManager {
             e.printStackTrace();
         }
         try {
-            con = DriverManager.getConnection(url, "huxx", "k223092871");
+            con = DriverManager.getConnection(url, "huxx", "12345678");
         } catch (SQLException e) {
             e.printStackTrace();
         }
